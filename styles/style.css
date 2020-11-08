@@ -1,0 +1,566 @@
+/* Fonts Used */
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+@import url('https://fonts.googleapis.com/css?family=Krub:400,700');
+
+/* ....Navigation Bar....... */
+
+header {
+  width           : 100%;
+  height          : 60px;
+  background-color: #131349;
+  z-index         : 20;
+  position        : fixed;
+  justify-content : space-between;
+  top             : 0;
+  display         : flex;
+  box-shadow      : 2px 3px 12px rgba(0, 0, 0, .4);
+  align-items     : center;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+#logo {
+  margin-left: 15px;
+}
+
+#logo-text {
+  color: lightgray;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-right a {
+  color: lightgrey;
+}
+
+.nav-right a:hover {
+  display: flex;
+  color  : white;
+}
+
+.nav-right div {
+  margin     : 0 20px;
+  font-size  : 1.2rem;
+  font-weight: 700;
+}
+
+.nav-left {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+}
+
+.nav-left h4 {
+  display: inline;
+}
+
+
+
+body {
+  font-family: 'Krub', sans-serif;
+  font-weight: thin;
+  background : black;
+  margin     : 0px;
+  overflow-x : hidden;
+}
+
+h1,
+h2 {
+  color      : white;
+  font-size  : 4em;
+  font-weight: normal;
+  font-family: 'Bangers', cursive !important;
+}
+
+body:after {
+  content               : "";
+  display               : block;
+  position              : fixed;
+  top                   : 0;
+  left                  : 0;
+  margin                : 0;
+  z-index               : -1;
+  width                 : 150%;
+  height                : 150%;
+  background            : url('../images/superHeroPic.png');
+  background-size       : contain;
+  /* background-position: 600px -200px; */
+
+  filter: blur(0px);
+}
+
+h1 {
+  font-size: 170%;
+  position : relative;
+  z-index  : 10;
+}
+
+/* ................Media Queries.......... */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 120%;
+  }
+
+  p {
+    display        : none;
+    /*     overflow: hidden; */
+    width          : 100%;
+    height         : 30%;
+  }
+
+  .watch {
+    margin: 5% auto;
+  }
+}
+
+/* ..........Main CSS for index.html............. */
+
+::-webkit-input-placeholder {
+  color: rgba(170, 169, 169, 0.856);
+}
+
+::-moz-placeholder {
+  text-align: center;
+}
+
+#search-box {
+  display       : flex;
+  flex-direction: column;
+  width         : 60%;
+  max-width     : 500px;
+}
+
+div.input {
+  position: relative;
+  height  : 80px;
+}
+
+div.input input {
+  margin       : 0 auto;
+  height       : 60%;
+  width        : 100%;
+  padding      : 0 10px;
+  border-radius: 2px;
+  position     : absolute;
+  border       : none;
+}
+
+.superman {
+  margin: 20% auto;
+}
+
+div.superman:before {
+  content          : '';
+  display          : block;
+  width            : 250px;
+  height           : 45px;
+  background       : #E8110F;
+  -webkit-transform: matrix(-1, 0, -0.5, 1, 0, 0);
+  transform        : matrix(-1, 0, -0.5, 1, 0, 0);
+  position         : absolute;
+  top              : 0;
+  z-index          : 0;
+  left             : -9px;
+  border-radius    : 2px;
+}
+
+div.superman input {
+  border       : 1px solid #3a2f05;
+  color        : #0dec20;
+  background   : #333d46;
+  box-shadow   :0px 20px 20px -20px #77044b;
+  
+}
+
+@-webkit-keyframes fly {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -5px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes fly {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -5px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+/* .....CSS for Results box..... */
+
+#results {
+  width        : 100%;
+  border-radius: 8px;
+  margin-top   : 8%;
+  box-sizing   : border-box;
+  margin-bottom: 10px;
+}
+
+.result-card {
+  width          : 100%;
+  padding        : 20px 10px 10px 10px;
+  text-align     : left;
+  color          : white;
+  border-bottom  : 1px solid grey;
+  box-shadow     : 2px 3px 12px rgba(0, 0, 0, .4);
+  background     : linear-gradient(to right, rgba(40, 40, 60, 1) 0%, rgba(40, 0, 60, 0) 90%);
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+}
+
+
+.result-card-image {
+  height  : 100px;
+  /* width: 30px; */
+}
+
+.result-card-container {
+  display        : flex;
+  flex-direction : column;
+  flex-grow      : 1;
+  padding-left   : 20px;
+  justify-content: space-around;
+}
+
+
+.bg-red,
+.bg-green,
+.detailsButton {
+  border       : 1px solid white;
+  border-radius: 8px;
+  position     : relative;
+  z-index      : 10;
+  color        : white;
+  text-align   : center;
+  background   : rgba(0, 0, 0, .3);
+  outline      : none;
+  box-shadow   : 0 0 10px rgba(0, 0, 0, .5);
+  transition   : all .2s;
+}
+
+.bg-red:hover,
+.bg-green:hover,
+.detailsButton:hover {
+  background    : rgba(255, 255, 255, .8);
+  color         : black;
+  box-shadow    : 0 0 10px rgba(255, 255, 255, .5);
+  mix-blend-mode: screen;
+  cursor        : pointer;
+}
+
+.bg-green {
+  background-color: green
+}
+
+.bg-red {
+  background-color: tomato
+}
+
+.detailsButton:active {
+  transform: translateY(2px);
+  cursor   : pointer;
+}
+
+
+/* .........Superman Flying Animation.......... */
+.sky .star {
+  position : absolute;
+  animation: stars 5s linear infinite;
+}
+
+.sky .superman-fly {
+  position  : absolute;
+  animation : flying 8s linear infinite;
+  margin-top: 7%;
+  font-size: 40px;
+  color: #E8110F;
+}
+
+@keyframes stars {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes flying {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(1300px);
+  }
+}
+
+
+/* .......... Main CSS for details.html............ */
+
+.card {
+  margin         : 10% auto;
+  border-radius  : 10px;
+  box-shadow     : 0 10px 25px 5px rgba(0, 0, 0, 0.2);
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  width          : 50%;
+  background     : #151515;
+  justify-content: center;
+  font-family    : 'Krub', sans-serif;
+}
+
+.card .ds-top {
+  position     : absolute;
+  border-radius: 10px 10px 0px 0px;
+  width        : 50%;
+  margin       : 10% auto;
+  top          : 0;
+  right        : 0;
+  left         : 0;
+  height       : 250px;
+  background   : crimson;
+  animation    : dsTop 1.5s;
+}
+
+.card-details {
+  width         : 100%;
+  margin        : 50px 0;
+  padding-top   : 40px;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  color         : white;
+}
+
+.avatar-holder {
+  z-index      : 1;
+  margin       : auto;
+  border-radius: 50%;
+  width        : 300px;
+  height       : 340px;
+  background   : white;
+  overflow     : hidden;
+  animation    : mvTop 1.5s;
+  border       : 6px solid #151515;
+}
+
+.avatar-holder img {
+  width     : 100%;
+  height    : 100%;
+  object-fit: cover;
+  box-shadow: 0 0 0 5px #151515,
+    inset 0 0 0 5px #000000,
+    inset 0 0 0 5px #000000,
+    inset 0 0 0 5px #000000,
+    inset 0 0 0 5px #000000, ;
+}
+
+.superheroInfo {
+  animation: mvBottom 1.5s;
+  width    : 80%;
+  margin   : 15px auto;
+}
+
+.bar {
+  height         : 5px;
+  background     : crimson;
+  text-align     : right;
+  font-size      : 14px;
+  color          : white;
+  font-size      : 16px;
+  padding        : 1px 5px 17px 0px;
+  animation      : fadeIn 5s;
+  padding-bottom : 17px;
+  animation-delay: 0.4s;
+  border-radius  : 8px;
+}
+
+.bar:hover {
+  background: white;
+  color     : #151515;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    left   : -300px;
+  }
+
+  100% {
+    opacity: 1;
+    left   : 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mvBottom {
+  0% {
+    bottom: -150px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
+
+@keyframes mvTop {
+  0% {
+    top: -150px;
+  }
+
+  100% {
+    top: 40px;
+  }
+}
+
+@keyframes dsTop {
+  0% {
+    top: -150px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.detail {
+  padding        : 8px;
+  display        : flex;
+  justify-content: space-between;
+  border-bottom  : 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.detail-power {
+  padding        : 8px;
+  justify-content: space-between;
+}
+
+#superhero-image {
+  max-height: 500px;
+  max-width : 90%;
+  box-shadow: 2px 5px 10px #000000;
+}
+
+#superhero-title {
+  margin-top: 40px;
+}
+
+.info-title {
+  margin-right : 10%;
+  font-weight  : 400;
+  margin-bottom: 7px;
+}
+
+.info-content {
+  text-align: right;
+  animation : fadeIn 5s;
+}
+
+#fav-icon {
+  transition: 0.5s;
+  font-size : 1.2rem;
+  color     : crimson;
+}
+
+#fav-icon:hover {
+  transform: scale(1.8);
+  cursor   : pointer;
+}
+
+/* .......CSS for Snackbar........ */
+
+#snackbar {
+  border-radius   : 2px;
+  padding         : 15px;
+  position        : fixed;
+  visibility      : hidden;
+  min-width       : 300px;
+  margin-left     : -125px;
+  color           : white;
+  background-color: rgb(29, 139, 29);
+  text-align      : center;
+  left            : 50%;
+  top             : 80px;
+  z-index         : 30;
+}
+
+#snackbar.visible {
+  visibility: visible;
+  animation : fadein 0.7s, fadeout 0.7s 3s;
+}
+
+/* ..........Main CSS for favourites.html.......... */
+
+#fav-card {
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  justify-content: center;
+  width          : 100%;
+  min-height     : 100vh;
+  margin         : 80px auto;
+}
+
+#fav-card .card {
+  width           : 15%;
+  height          : 350px;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  align-items     : center;
+  background-color: #151515;
+  margin          : 20px;
+}
+
+#fav-card .card .avatar {
+  position     : relative;
+  border-radius: 10px 10px 0px 0px;
+  width        : 94%;
+  height       : 90%;
+  z-index      : 1;
+  overflow     : hidden;
+  animation    : fadeIn 1.5s;
+  border       : 6px solid crimson;
+}
+
+#fav-card .card .detailsButton {
+  margin : 20px auto;
+  padding: 0px 20px;
+}

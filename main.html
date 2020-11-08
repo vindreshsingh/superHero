@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="images//super.png" type="image/gif">
+  <!-- Custom stylesheets -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Superheroes</title>
+</head>
+
+<body">
+  <div id="snackbar"></div>
+  <!-- Heading navigation -->
+  <header>
+
+    <a href="#">
+      <div class="nav-left">
+        <!--super hero logo -->
+        <img id="logo" src="images/super.png" width="50px">
+        <div id="logo-text">
+          <h1>Superhero</h1>
+        </div>
+      </div>
+    </a>
+    <div class="nav-right">
+      <!--Go on index page after clicking dashboard-->
+      <a href="main.html">
+        <div>Dashboar Page</div>
+      </a>
+      <!--go on favroites page after clicking on my favorites-->
+      <a href="myfavsuperheros.html">
+        <div>My Favourites SuperHeros</div>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="sky" id="animate">
+      <!--flying your super man-->
+      <h1 class="superman-fly" height="80%">Super hero</h1>
+    </div>
+    <div id="search-box" class="input superman">
+      <!--input box wher enter super man name search-->
+      <input id="inputName" type="text" name="superheroName" placeholder="Serach your superhero">
+      <div id="results">
+      </div>
+    </div>
+  </main>
+
+  <!-- java Script files -->
+
+  <script src="controller/main.js"></script>
+</body>
+
+</html>
